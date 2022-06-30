@@ -70,6 +70,7 @@
        		document.getElementById('field2').removeChild(obj.parentNode); }
 	</script>
 	
+	<!-- 폼 작성 -->
 	<h1><center><u>[ 회원가입안내 ]</u></center></h1>
 	<form method="get" action="./1_form_tr.html" id="form">
 		<br><div style="margin-left:188px"><b><p style="font-size:120%">□ 기본정보</p></b></div>
@@ -84,7 +85,7 @@
 			<tr>
 				<th width="20px">✓ 아이디</th>
 				<td width="150px">
-					<input type="id" name="id" id="id">
+					<input type="text" name="id" id="id">
 					<input type="button" id="idch" value="✓ 아이디중복확인" onclick="here();">
 					<br><span style="font-size:13px; color:#5F4C0B">💬 6~16자까지 영문자(소문자), 숫자 사용 가능합니다.</span></td>
 			</tr>
@@ -107,7 +108,7 @@
 			<tr>
 				<th width="20px">✓ 이메일</th>
 				<td width="150px">
-				<input type="email" name="email" id="eamil"> @ <input type="email" name="email" id="eamil">
+				<input type="text" name="email" id="eamil"> @ <input type="text" name="email" id="eamil">
 						<select>
 							<option value="">메일주소선택
 							<option value="naver">naver.com
@@ -131,7 +132,7 @@
 						<option value="032">032
 						<option value="033">033
 					</select>
-					- <input type="num" name="hp" id="hp"> - <input type="num" name="hp" id="hp">
+					- <input type="number" name="hp" id="hp"> - <input type="number" name="hp" id="hp">
 					<br>일반전화 
 					<select>
 						<option value="">선택
@@ -142,7 +143,7 @@
 						<option value="032">032
 						<option value="033">033
 					</select>
-					- <input type="num2" name="hp2" id="hp2"> - <input type="num2" name="hp2" id="hp2">
+					- <input type="number" name="hp2" id="hp2"> - <input type="number" name="hp2" id="hp2">
 					<br>
 					<span style="font-size:13px; color:#5F4C0B">💬 연락처는 둘 중 하나만 입력해도 됩니다.</span></td>
 			</tr>
@@ -151,7 +152,7 @@
 			<tr>
 				<th width="20px">✓ 우편번호</th>
 				<td width="150px">
-					<input type="post" name="post" id="post">
+					<input type="text" name="post" id="post">
 					<input type="button" id="post" value="🔍︎주소검색" onclick="here2();"></td>
 			</tr>
 		</table>
@@ -159,9 +160,9 @@
 			<tr>
 				<th width= 135.5px">✓ 주소</th>
 				<td width="70px">
-					<input type="post" name="post" id="post" size="100">
+					<input type="text" name="post" id="post" size="100">
 					<br>
-					<input type="address" name="address" id="address"></td>
+					<input type="text" name="address" id="address"></td>
 			</tr>
 		</table>
 		<table width=80%">
@@ -187,14 +188,14 @@
 			<tr>
 				<th width="20px">✓ 필명</th>
 				<td width="120px">
-					<input type="nickname" name="nickname" id="nickname">
+					<input type="text" name="nickname" id="nickname">
 					<br><span style="font-size:13px; color:#5F4C0B">💬 필명이 없으신 분들은 실명을 등록해 주시기 바랍니다.(작가정보에 노출 될 이름 입니다.)</span></td>
 			</tr>
 		</table>
 		<table width=80%">
 			<tr>
 				<th width= 135.5px">대표작</th>
-				<td width="70px"><input type="repre" name="repre" id="repre" size="100"></td>
+				<td width="70px"><input type="text" name="repre" id="repre" size="100"></td>
 			</tr>
 		</table>
 		<table width=80%">
@@ -209,12 +210,12 @@
 			<tr>
 				<th width="48.9px">주요작품</th>
 				<td width="100px">
-					<input type="title" name="title" placeholder="스토리 제목을 입력하세요" id="title" size="30">
-					<input type="role" name="role" placeholder="해당 스토리의 역할을 입력하세요" id="role" size="40">
+					<input type="text" name="title" placeholder="스토리 제목을 입력하세요" id="title" size="30">
+					<input type="text" name="role" placeholder="해당 스토리의 역할을 입력하세요" id="role" size="40">
 					<input type="reset" value="🗑삭제">
 					<div id="pre_set" style="display:none">
-	  			 		<input type="text1" name="text1" placeholder="스토리 제목을 입력하세요" size="30"> 
-	   					<input type="text2" name="text2" placeholder="해당 스토리의 역할을 입력하세요" size="40">   
+	  			 		<input type="text" name="text1" placeholder="스토리 제목을 입력하세요" size="30"> 
+	   					<input type="text" name="text2" placeholder="해당 스토리의 역할을 입력하세요" size="40">   
 			   			<input type="button" value="🗑삭제" onclick="remove(this)">
 					</div>
 					<div id="field"></div>
@@ -248,7 +249,8 @@
 			<tr>
 				<th width="19.8px">사업자등록번호</th>
 				<td width="121px">
-					<input type="num" name="num" id="num" size="10"> - <input type="num" name="num" id="num" size="10"> - <input type="num" name="num" id="num" size="20"></td>
+					<input type="number" name="number id="num" size="10"> - <input type="number" name="number" id="num" size="10"> 
+					- <input type="number" name="number" id="num" size="20"></td>
 			</tr>
 		</table>
 		<table width=80%">
@@ -279,7 +281,7 @@
 					<input type="checkbox" name="produce">제작자
 					<input type="checkbox" name="inv">투자자
 					<input type="checkbox" name="agent">에이전트
-					<input type="checkbox" name="etc">기타
+					<input type="checkbox" name="etc2">기타
 					<input type="text" name="content" id="content" size="30"></td>
 			</tr>
 		</table>
@@ -289,14 +291,14 @@
 				<td width="120px"><b>주요경력사항을 등록해 주시기 바랍니다.</b>
 				<br><span style="font-size:13px; color:#5F4C0B">💬( 기간, 사업내용, 담당업무를 입력해 주시기 바랍니다 )</span>
 				<br><input type="date" placeholder=""> ~ <input type="date" placeholder="">
-				<input type="title" name="title" placeholder="사업내용을 입력해주세요" id="title" size="30">
-				<input type="title" name="title" placeholder="담당업무를 입력해주세요" id="title" size="30">
+				<input type="text" name="title2" placeholder="사업내용을 입력해주세요" id="title" size="30">
+				<input type="text" name="title3" placeholder="담당업무를 입력해주세요" id="title" size="30">
 				<input type="reset" value="🗑삭제">
 				<br>
 				<div id="pre_set2" style="display:none">
 					<input type="date"> ~ <input type="date">
-	  			 	<input type="text3" name="text3" placeholder="사업내용을 입력해주세요" size="30"> 
-	   				<input type="text4" name="text4" placeholder="담당업무를 입력해주세요" size="30">   
+	  			 	<input type="text" name="text3" placeholder="사업내용을 입력해주세요" size="30"> 
+	   				<input type="text" name="text4" placeholder="담당업무를 입력해주세요" size="30">   
 			   		<input type="button" value="🗑삭제" onclick="remove2(this)">
 				</div>
 				<div id="field2"></div>
