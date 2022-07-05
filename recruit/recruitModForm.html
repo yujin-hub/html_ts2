@@ -4,10 +4,288 @@
 	<meta charset="uTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>YUJIN CHOI</title>
+	
+	<style type="text/css" >
+		table {
+		 width: 75%
+		}
+		table, th, td {
+			margin: auto;
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		td {
+			padding: 10px;
+			}
+		th {
+			width: 65px;
+			background-color: #ecece8;
+			padding: 10px;
+		}
+		span {
+			font-size: 15px;
+			color: #53544f;
+			margin-left: 235px;
+		}
+		input {
+		 	text-align: center;
+		 	font-size: 15px;
+		 	border: 0px;
+		}
+	</style>	
 </head>
 	
-<body>	  
+<body>
+	<!-- 테이블항목 추가, 삭제 --> 
+	<script type="text/javascript">
+		function save() {
+			alert("저장되었습니다.");
+			document.getElementById("form").submit();
+		}
+		/* t1 */
+		function add_row() {
+		    var t1body = document.getElementById("t1");
+		    var row = t1.insertRow( t1.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
+			cell1.innerHTML= '<input type="date" name="date"> ~ <input type="date" name="date">';
+			cell2.innerHTML= '<input type="text" name="school">';
+			cell3.innerHTML= '<select> <option>졸업 <option>졸업예정 <option>유예 </select>';
+			cell4.innerHTML= '<input type="text" name="major">';
+			cell5.innerHTML= '<input type="text" name="place">';
+		}
+		function delete_row() {
+		    var t1 = document.getElementById("t1");
+		    if (t1.rows.length < 2) return;
+		    t1.deleteRow( t1.rows.length-1 ); 
+		}
+		/* t2 */
+		function add_row2() {
+		    var t2body = document.getElementById("t2");
+		    var row = t2.insertRow( t2.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML= '<input type="date" name="period"> ~ <input type="date" name="period">';
+			cell2.innerHTML= '<input type="text" name="coprname">';
+			cell3.innerHTML= '<input type="text" name="contents">';
+		}
+		function delete_row2() {
+		    var t2 = document.getElementById("t2");
+		    if (t2.rows.length < 2) return;
+		    t2.deleteRow( t2.rows.length-1 ); 
+		}
+		/* t3 */
+		function add_row3() {
+		    var t3body = document.getElementById("t3");
+		    var row = t3.insertRow( t3.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			cell1.innerHTML= '<input type="date" name="peri">';
+			cell2.innerHTML= '<input type="text" name="grade">';
+			cell3.innerHTML= '<input type="text" name="coprn">';
+			cell4.innerHTML= '<input type="text" name="skill">';
+		}
+		function delete_row3() {
+		    var t3 = document.getElementById("t3");
+		    if (t3.rows.length < 2) return;
+		    t3.deleteRow( t3.rows.length-1 ); 
+		}
+		/* t4 */
+		function add_row4() {
+		    var t4body = document.getElementById("t4");
+		    var row = t4.insertRow( t4.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			cell1.innerHTML= '<input type="date" name="per">';
+			cell2.innerHTML= '<input type="text" name="corpra">';
+			cell3.innerHTML= '<input type="text" name="workk">';
+			cell4.innerHTML= '<input type="text" name="skill1">';
+		}
+		function delete_row4() {
+		    var t4 = document.getElementById("t4");
+		    if (t4.rows.length < 2) return;
+		    t4.deleteRow( t4.rows.length-1 ); 
+		}
+	</script>
 	
-		
+	<br>
+	<h1><center>📄입사 지원서</center></h1>
+	<form method="get" action="./recruitForm.html">
+		<span>▼ 기본 정보</span>
+		<table>
+			<tr>
+				<td rowspan="6" width="1px"><input type="file" name="file"></td>
+				<th rowspan="3">성명</th>
+				<td width="55px;">(한글)</td>
+				<td width="230px;"><input type="text" name="name" value="유재석"></td>
+				<th>지원회사</th>
+				<td width="230px;"><input type="text" name="comp" value="ㅇㅇㅇ"></td>
+			</tr>
+			<tr>
+				<td width="20px;">(한자)</td>
+				<td><input type="text" name="cname" value="劉 在 錫"></td>
+				<th>지원분야</th>
+				<td width="100px"><input type="text" name="depart" value="영업"></td>
+			</tr>
+			<tr>
+				<td width="20px;">(영문)</td>
+				<td><input type="text" name="ename" value="Yu Jae Seok"></td>
+				<th>희망연봉</th>
+				<td><input type="text" name="salary" value="회사 내규에 따름"></td>
+			</tr>
+			<tr>
+				<th>생년월일</th>
+				<td width="20px;">(양력,음력)</td>
+				<td><input type="date" name="birth" value="1972-08-14"></td>
+				<th>근무가능시기</th>
+				<td><input type="date" name="work" value="2022-08-02"></td>
+			</tr>
+			<tr>
+				<th rowspan="2">연락처</th>
+				<td width="20px;">휴대전화</td>
+				<td><input type="number" name="mobile" value="010-0000-0000"></td>
+				<th>e-mail</th>
+				<td><input type="text" name="email" value="wotjr@naver.com"></td>
+			</tr>
+			<tr>
+				<td width="20px;">주소</td>
+				<td colspan="3"><input type="text" name="add" value="서울특별시 강남구 압구정동"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<span>▼ 학력 (최신 이력이 가장 위로)</span>
+		<input type="button" value="+ 추가 " onclick="add_row()" style="padding:5px 10px; margin-left: 1514px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row(this)" style="padding:5px 10px;">
+		<table id="t1">
+			<tr>
+				<th>기간</th>
+				<th>출신학교</th>
+				<th>구분</th>
+				<th>학과</th>
+				<th>소재지</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="date" value="1991-03-04"> ~ <input type="date" name="date" value="1998-02-23"></td>
+				<td><input type="text" name="school" value="ㅇㅇ대학교"></td>
+				<td>
+					<select>
+						<option value="">졸업
+						<option value="">졸업예정
+						<option value="">유예
+					</select>
+				</td>
+				<td><input type="text" name="major" value="연예과"></td>
+				<td><input type="text" name="place" value="서울"></td>
+			</tr>
+			<tr>
+				<td><input type="date" name="date1" value="1988-03-02"> ~ <input type="date" name="date" value="1990-02-19"></td>
+				<td><input type="text" name="school1" value="ㅇㅇ고등학교"></td>
+				<td>
+					<select>
+						<option value="">졸업
+						<option value="naver">졸업예정
+						<option value="naver">유예
+					</select>
+				</td>
+				<td><input type="text" name="major1" value="ㅇㅇ과"></td>
+				<td><input type="text" name="place1" value="서울"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<span>▼ 교육연수</span>
+		<br>
+		<input type="button" value="+ 추가 " onclick="add_row2()" style="padding:5px 10px; margin-left: 1514px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row2(this)" style="padding:5px 10px;">
+		<table id="t2">
+			<tr>
+				<th>연수기간</th>
+				<th>연수기관</th>
+				<th>연수과정 및 내용</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="period" value="2021-12-30"> ~ <input type="date" name="period" value="2022-06-22"></td>
+				<td><input type="text" name="coprname" value="기관"></td>
+				<td><input type="text" name="contents" value="내용"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<span>▼ 자격사항</span>
+		<br>
+		<input type="button" value="+ 추가 " onclick="add_row3()" style="padding:5px 10px; margin-left: 1514px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row3(this)" style="padding:5px 10px;">
+		<table id="t3">
+			<tr>
+				<th>취득일</th>
+				<th>종류 및 등급</th>
+				<th>발행처</th>
+				<th>보유기술 및 수준</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="peri" value="2021-08-26"></td>
+				<td><input type="text" name="grade" value="워드프로세서 1급"></td>
+				<td><input type="text" name="coprn" value="대한상공회의소"></td>
+				<td><input type="text" name="skill"></td>
+			</tr>
+			<tr>
+				<td><input type="date" name="peri" value="2021-06-11"></td>
+				<td><input type="text" name="grade" value="정보처리기사"></td>
+				<td><input type="text" name="coprn" value="한국산업인력공단"></td>
+				<td><input type="text" name="skill"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<span>▼ 경력(4대 보험 가입 경력)</span>
+		<br>
+		<input type="button" value="+ 추가 " onclick="add_row4()" style="padding:5px 10px; margin-left: 1514px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row4(this)" style="padding:5px 10px;">
+		<table id="t4">
+			<tr>
+				<th>활동기간</th>
+				<th>기 관</th>
+				<th>담당업무</th>
+				<th>경력 및 습득역량</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="per" value="2022-05-04"> ~ <input type="date" name="per" value="2010-08-01"></td>
+				<td><input type="text" name="corpra" value="sbs"></td>
+				<td><input type="text" name="workk" value="방송"></td>
+				<td><input type="text" name="skill1"></td>
+			</tr>
+			<tr>
+				<td><input type="date" name="per" value="2011-01-15"> ~ <input type="date" name="per" value="2022-04-07"></td>
+				<td><input type="text" name="corpra" value="mbc"></td>
+				<td><input type="text" name="workk" value="방송"></td>
+				<td><input type="text" name="skill1"></td>
+			</tr>
+		</table>
+		<br>
+		<span>▼ 자기소개서(파일로 첨부하세요)</span>
+		<table>
+			<tr>
+				<td width="250px;" bgcolor="#f3f3f1"><b><center>자기소개서</center></b></th>
+				<td><input type="file" name="file"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<form method="get" action="recruitRegForm.html">
+			<input type="button" value="✔ 저장" style="padding:10px 20px; font-size:20px; margin-left: 830px; border: 0px;" onclick="save();"> 
+			<input type="button" value="✘ 취소" style="padding:10px 20px; font-size:20px; margin-left: 20px; border: 0px;" onclick="location.href='recruitView.html'">	
+		</form>
+	</form>
 </body>
 </html>
+	

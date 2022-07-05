@@ -8,6 +8,7 @@
 	<style type="text/css">
 		table, th, td {
 			margin: auto;
+			border: 1px solid #f7f7f6;
 			border-collapse: collapse;
 		}
 		
@@ -18,7 +19,12 @@
 		}
 		th {
 			background-color: #edf1ef;
+			font-family: 'Happiness-Sans-Bold';
 		}
+		td {
+			font-family: 'GmarketSansMedium';
+			color: #4d4d4b;
+			}
 		 .input-box {
             margin-left: 1445px;
   			border-radius: 8px;
@@ -32,7 +38,27 @@
             border-radius: 8px;
             color: black;
         }
-
+		a {
+  			text-decoration-line: none;
+  			color: inherit;
+  		}
+  		a:hover {
+  			color : blue;
+		}
+		
+		@font-face {
+		    font-family: 'Happiness-Sans-Bold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+		    font-weight: 700;
+		    font-style: normal;
+		}
+		
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
 	</style>
 </head>
 	
@@ -50,17 +76,19 @@
     <br>
     <br>
     <br>
+    <br>
     <div class="input-box">
         <input type="text" placeholder="Search" style="font-size:14px;">
         <button style="font-size:15px;">🔍 검색</button>
     </div>
     <br>
-    <span style="font-size: 13px; margin-left: 190px; color: #5F4C0B">※ 등록 날짜 순으로 정렬됩니다.</span>
+    <br>
+    <span style="font-size: 14px; margin-left: 190px; color: #5F4C0B">※ 등록 날짜 순으로 정렬됩니다.</span>
     <br>
 	<table width=80%>
 		<tr>
-			<th width= "10px;">NO</th>
-			<th width= "30px;">구분</th>
+			<th width= "10px;" >NO</th>
+			<th width= "30px;" >구분</th>
 			<th width= "40px;">이름</th>
 			<th width= "100px;">전화번호</th>
 			<th width= "60px;">이메일</th>
@@ -71,72 +99,82 @@
 		<tr>
 			<td>1</td>
 			<td>신입</td>
-			<td>유재석</td>
+			<td><a href="recruitView.html">유재석</a></td>
 			<td>010-0000-0000</td>
 			<td>wotjr@naver.com</td>
 			<td>영업</td>
 			<td>서울</td>
-			<td>22.06.23</td>
+			<td>22.07.02</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>경력</td>
-			<td>노홍철</td>
+			<td><a href="recruitView.html">노홍철</a></td>
 			<td>010-0000-0000</td>
 			<td>ghdcjf@naver.com</td>
 			<td>경영</td>
 			<td>서울</td>
-			<td>22.07.04</td>
+			<td>22.07.01</td>
 		</tr>
 		<tr>
 			<td>3</td>
 			<td>경력</td>
-			<td>하동훈</td>
+			<td><a href="recruitView.html">하동훈</a></td>
 			<td>010-0000-0000</td>
 			<td>ehdgns@gmail.com</td>
 			<td>회계</td>
 			<td>분당</td>
-			<td>22.06.30</td>
+			<td>22.06.28</td>
 		</tr>
 		<tr>
 			<td>4</td>
 			<td>신입</td>
-			<td>박명수</td>
+			<td><a href="recruitView.html">박명수</a></td>
 			<td>010-0000-0000</td>
 			<td>audtn@naver.com</td>
 			<td>백엔드</td>
 			<td>판교</td>
-			<td>22.07.02</td>
+			<td>22.06.27</td>
 		</tr>
 		<tr>
 			<td>5</td>
 			<td>신입</td>
-			<td>정형돈</td>
+			<td><a href="recruitView.html">정형돈</a></td>
 			<td>010-0000-0000</td>
 			<td>gudehs@gmail.com</td>
 			<td>백엔드</td>
 			<td>분당</td>
-			<td>22.06.11</td>
+			<td>22.06.27</td>
 		</tr>
 		<tr>
 			<td>6</td>
 			<td>신입</td>
-			<td>정준하</td>
+			<td><a href="recruitView.html">정준하</a></td>
 			<td>010-0000-0000</td>
 			<td>wnsgk@nate.com</td>
 			<td>정보보안</td>
 			<td>화성</td>
-			<td>22.06.15</td>
+			<td>22.06.24</td>
 		</tr>
 		<tr>
 			<td>7</td>
 			<td>신입</td>
-			<td>황광희</td>
+			<td><a href="recruitView.html">황광희</a></td>
 			<td>010-0000-0000</td>
 			<td>rhkdgml@naver.com</td>
 			<td>앱개발</td>
 			<td>서울</td>
-			<td>22.06.20</td>
+			<td>22.06.21</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>경력</td>
+			<td><a href="recruitView.html">양세형</a></td>
+			<td>010-0000-0000</td>
+			<td>tpgud@naver.com</td>
+			<td>백엔드</td>
+			<td>서울</td>
+			<td>22.06.18</td>
 		</tr>
 	</table>
 	<br>

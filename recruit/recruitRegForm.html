@@ -6,309 +6,260 @@
 	<title>YUJIN CHOI</title>
 	
 	<style type="text/css" >
+		table {
+		 width: 75%
+		}
 		table, th, td {
 			margin: auto;
 			border: 1px solid black;
 			border-collapse: collapse;
+			text-align: center;
 		}
 		td {
 			padding: 10px;
 			}
 		th {
-			background-color:#a18758;
-			color:white;
+			width: 65px;
+			background-color: #ecece8;
 			padding: 10px;
+		}
+		span {
+			font-size: 15px;
+			color: #53544f;
+			margin-left: 235px;
+		}
+		input {
+		 	text-align: center;
+		 	font-size: 14px;
+		 	border: 0px;
 		}
 	</style>	
 </head>
 	
-<body>	
-	<!-- 폼 수정, 맨 밑에 뒤로가기, 제출 버튼 만들기-->
+<body>
+	<!-- 테이블항목 추가, 삭제 --> 
 	<script type="text/javascript">
-		function here() {
-			alert("사용 가능한 아이디입니다.");
-			document.getElementById("form").submit();
-		}
-		function here2() {
-			alert("우편번호를 검색합니다.");
-			document.getElementById("form").submit();
-		}
-		function here3() {
+		function save() {
 			alert("저장되었습니다.");
 			document.getElementById("form").submit();
 		}
-		function here4() {
-			alert("취소되었습니다.");
-			document.getElementById("form").submit();
+		/* t1 */
+		function add_row() {
+		    var t1body = document.getElementById("t1");
+		    var row = t1.insertRow( t1.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
+			cell1.innerHTML= '<input type="date" name="date"> ~ <input type="date" name="date">';
+			cell2.innerHTML= '<input type="text" name="school">';
+			cell3.innerHTML= '<select> <option>졸업 <option>졸업예정 <option>유예 </select>';
+			cell4.innerHTML= '<input type="text" name="major">';
+			cell5.innerHTML= '<input type="text" name="place">';
 		}
-		/* 주요 작품 내용 추가, 삭제 */
-		function add(){
-	 	   var div = document.createElement('div');
-  			div.innerHTML = document.getElementById('pre_set').innerHTML;
-  			document.getElementById('field').appendChild(div);
-  		}
-		function remove(obj){
-  			document.getElementById('field').removeChild(obj.parentNode);}
-		/* 주요 경력 내용 추가, 삭제 */
-		function add2(){
-      	 	var div = document.createElement('div');
-        	div.innerHTML = document.getElementById('pre_set2').innerHTML;
-        	document.getElementById('field2').appendChild(div); 
-	    }
-   		function remove2(obj){
-       		document.getElementById('field2').removeChild(obj.parentNode); 
-       	}
+		function delete_row() {
+		    var t1 = document.getElementById("t1");
+		    if (t1.rows.length < 2) return;
+		    t1.deleteRow( t1.rows.length-1 ); 
+		}
+		/* t2 */
+		function add_row2() {
+		    var t2body = document.getElementById("t2");
+		    var row = t2.insertRow( t2.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML= '<input type="date" name="period"> ~ <input type="date" name="period">';
+			cell2.innerHTML= '<input type="text" name="coprname">';
+			cell3.innerHTML= '<input type="text" name="contents">';
+		}
+		function delete_row2() {
+		    var t2 = document.getElementById("t2");
+		    if (t2.rows.length < 2) return;
+		    t2.deleteRow( t2.rows.length-1 ); 
+		}
+		/* t3 */
+		function add_row3() {
+		    var t3body = document.getElementById("t3");
+		    var row = t3.insertRow( t3.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			cell1.innerHTML= '<input type="date" name="peri">';
+			cell2.innerHTML= '<input type="text" name="grade">';
+			cell3.innerHTML= '<input type="text" name="coprn">';
+			cell4.innerHTML= '<input type="text" name="skill">';
+		}
+		function delete_row3() {
+		    var t3 = document.getElementById("t3");
+		    if (t3.rows.length < 2) return;
+		    t3.deleteRow( t3.rows.length-1 ); 
+		}
+		/* t4 */
+		function add_row4() {
+		    var t4body = document.getElementById("t4");
+		    var row = t4.insertRow( t4.rows.length ); 
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			cell1.innerHTML= '<input type="date" name="per">';
+			cell2.innerHTML= '<input type="text" name="corpra">';
+			cell3.innerHTML= '<input type="text" name="workk">';
+			cell4.innerHTML= '<input type="text" name="skill1">';
+		}
+		function delete_row4() {
+		    var t4 = document.getElementById("t4");
+		    if (t4.rows.length < 2) return;
+		    t4.deleteRow( t4.rows.length-1 ); 
+		}
 	</script>
 	
-	<!-- 폼 작성 -->
-	<h1><center><u>[ 회원가입안내 ]</u></center></h1>
-	<form method="get" action="./1_form_tr.html" id="form">
-		<br><div style="margin-left:188px"><b><p style="font-size:120%">□ 기본정보</p></b></div>
-		<small><div style="margin-left:1475px">✓ 표시 항목은 필수 입력 항목입니다.</div></small>
-		<table width=80%">
+	<br>
+	<h1><center>📄입사 지원서</center></h1>
+	<form method="get" action="./recruitForm.html">
+		<span>□ 기본 정보</span>
+		<table>
 			<tr>
-				<th width="20px">✓ 이름</th>
-				<td width="150px"><input type="text" name="name" id="name"></td>
+				<td rowspan="6" width="1px"><input type="file" name="file"></td>
+				<th rowspan="3">성명</th>
+				<td width="55px;">(한글)</td>
+				<td width="230px;"><input type="text" name="name"></td>
+				<th>지원회사</th>
+				<td width="230px;"><input type="text" name="comp"></td>
+			</tr>
+			<tr>
+				<td width="20px;">(한자)</td>
+				<td><input type="text" name="cname"></td>
+				<th>지원분야</th>
+				<td width="100px"><input type="text" name="depart"></td>
+			</tr>
+			<tr>
+				<td width="20px;">(영문)</td>
+				<td><input type="text" name="ename"></td>
+				<th>희망연봉</th>
+				<td><input type="text" name="salary"></td>
+			</tr>
+			<tr>
+				<th>생년월일</th>
+				<td width="20px;">(양력,음력)</td>
+				<td><input type="date" name="birth"></td>
+				<th>근무가능시기</th>
+				<td><input type="date" name="work"></td>
+			</tr>
+			<tr>
+				<th rowspan="2">연락처</th>
+				<td width="20px;">휴대전화</td>
+				<td><input type="number" name="mobile"></td>
+				<th>e-mail</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td width="20px;">주소</td>
+				<td colspan="3"><input type="text" name="add"></td>
 			</tr>
 		</table>
-		<table width=80%">
+		<br>
+		<br>
+		<span>▼ 학력 (최신 이력이 가장 위로)</span>
+		<input type="button" value="+ 추가 " onclick="add_row()" style="padding:5px 10px; margin-left: 1520px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row(this)" style="padding:5px 10px;">
+		<table id="t1">
 			<tr>
-				<th width="20px">✓ 아이디</th>
-				<td width="150px">
-					<input type="text" name="id" id="id">
-					<input type="button" id="idch" value="✓ 아이디중복확인" onclick="here();">
-					<br><span style="font-size:13px; color:#5F4C0B">💬 6~16자까지 영문자(소문자), 숫자 사용 가능합니다.</span>
-				</td>
+				<th>기간</th>
+				<th>출신학교</th>
+				<th>구분</th>
+				<th>학과</th>
+				<th>소재지</th>
 			</tr>
-		</table>
-		<table width=80%">
 			<tr>
-				<th width="20px">✓ 비밀번호</th>
-				<td width="150px"><input type="password" name="password" id="password">
-					<br><span style="font-size:13px; color:#5F4C0B">💬 6~16자까지 영문자(대소문자), 숫자 및 특수문자사용 가능합니다.
-					<br>3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="20px">✓ 비밀번호 확인</th>
-				<td width="150px"><input type="password" name="passwordch" id="passwordch"></td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="20px">✓ 이메일</th>
-				<td width="150px">
-					<input type="text" name="email" id="eamil"> @ <input type="text" name="email" id="eamil">
+				<td><input type="date" name="date"> ~ <input type="date" name="date"></td>
+				<td><input type="text" name="school"></td>
+				<td>
 					<select>
-						<option value="">메일주소선택
-						<option value="naver">naver.com
-						<option value="gmail">gmail.com
-						<option value="nate">nate.com
-						<option value="daum">daum.net
-						<option value="hanmail">hanmail.net
-						<option value="ect">직접 입력
+						<option>졸업
+						<option>졸업예정
+						<option>유예
 					</select>
 				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="20px">✓ 연락처</th>
-				<td width="150px"> 휴대전화
-					<select>
-						<option value="">010
-						<option value="02">02
-						<option value="070">070
-						<option value="031">031
-						<option value="032">032
-						<option value="033">033
-					</select>
-					- <input type="number" name="hp" id="hp"> - <input type="number" name="hp" id="hp">
-					<br>일반전화 
-					<select>
-						<option value="">선택
-						<option value="010">010
-						<option value="02">02
-						<option value="070">070
-						<option value="031">031
-						<option value="032">032
-						<option value="033">033
-					</select>
-					- <input type="number" name="hp2" id="hp2"> - <input type="number" name="hp2" id="hp2">
-					<br>
-					<span style="font-size:13px; color:#5F4C0B">💬 연락처는 둘 중 하나만 입력해도 됩니다.</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="20px">✓ 우편번호</th>
-				<td width="150px">
-					<input type="text" name="post" id="post">
-					<input type="button" id="post" value="🔍︎주소검색" onclick="here2();">
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width= 135.5px">✓ 주소</th>
-				<td width="70px">
-					<input type="text" name="post" id="post" size="100">
-					<br>
-					<input type="text" name="address" id="address">
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="10px">정보수신 여부</th>
-				<td width="158px">서비스 및 이벤트 소식을 
-					<input type="checkbox" name="email2">Email로 수신하겠습니다.
-					<input type="checkbox" name="SMS2">SMS로 수신하겠습니다.
-				</td>
+				<td><input type="text" name="major"></td>
+				<td><input type="text" name="place"></td>
 			</tr>
 		</table>
 		<br>
 		<br>
+		<span>▼ 교육연수</span>
 		<br>
-		<div style="margin-left:188px"><b><p style="font-size:120%">□ 작가정보</p></b></div>
-		<small><div style="margin-left:1475px">✓ 표시 항목은 필수 입력 항목입니다.</div></small>
-		<table width=80%">
+		<input type="button" value="+ 추가 " onclick="add_row2()" style="padding:5px 10px; margin-left: 1520px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row2(this)" style="padding:5px 10px;">
+		<table id="t2">
 			<tr>
-				<th width="35.5px">프로필이미지</th>
-				<td width="150px"><input type="file" name="file"></td>
+				<th>연수기간</th>
+				<th>연수기관</th>
+				<th>연수과정 및 내용</th>
 			</tr>
-		</table>
-		<table width=80%">
 			<tr>
-				<th width="20px">✓ 필명</th>
-				<td width="120px">
-					<input type="text" name="nickname" id="nickname">
-					<br><span style="font-size:13px; color:#5F4C0B">💬 필명이 없으신 분들은 실명을 등록해 주시기 바랍니다.(작가정보에 노출 될 이름 입니다.)</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width= 135.5px">대표작</th>
-				<td width="70px"><input type="text" name="repre" id="repre" size="100"></td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width= 135.5px">수상내역</th>
-				<td width="70px">
-					<textarea rows="15" cols="102" name="win"></textarea>
-					<br><span style="font-size:13px; color:#5F4C0B">💬 여러 수상 내역을 등록 시 콤마(,)로 구분하여 등록해 주시기 바랍니다.</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="48.9px">주요작품</th>
-				<td width="100px">
-					<input type="text" name="title" placeholder="스토리 제목을 입력하세요" id="title" size="30">
-					<input type="text" name="role" placeholder="해당 스토리의 역할을 입력하세요" id="role" size="40">
-					<input type="reset" value="🗑삭제">
-					<div id="pre_set" style="display:none">
-	  			 		<input type="text" name="text1" placeholder="스토리 제목을 입력하세요" size="30"> 
-	   					<input type="text" name="text2" placeholder="해당 스토리의 역할을 입력하세요" size="40">   
-			   			<input type="button" value="🗑삭제" onclick="remove(this)">
-					</div>
-					<div id="field"></div>
-					<input type="button" value="+추가 " onclick="add()">
-					<br><span style="font-size:13px; color:#5F4C0B">💬 본인 참여 주요작품의 제목 및 역할에 대해 등록해 주시기 바랍니다.</span>
-					<br><span style="font-size:13px; color:#5F4C0B">( 역할은 메인작가, 공동작가, 보조작가, 각색, 각본 등 본인 역할을 정확히 기재해 주시기 바랍니다. )</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="20.5px">작가정보공개설정</th>
-				<td width="180px"><input type="radio" name="info">공개 <input type="radio" name="info">비공개</td>
+				<td><input type="date" name="period"> ~ <input type="date" name="period"></td>
+				<td><input type="text" name="coprname"></td>
+				<td><input type="text" name="contents"></td>
 			</tr>
 		</table>
 		<br>
-		<!-- 저장, 취소 버튼 -->
-		<center><input type="button" id="save" value="✓ 저장" style="padding:10px 20px; font-size:15px; background-color:#848484;" onclick="here3();"> 
-		<input type="button" id="no" value="취소" style="padding:10px 25px; font-size:15px; background-color:#BDBDBD;" onclick="here4();"></center>
+		<br>
+		<span>▼ 자격사항</span>
+		<br>
+		<input type="button" value="+ 추가 " onclick="add_row3()" style="padding:5px 10px; margin-left: 1520px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row3(this)" style="padding:5px 10px;">
+		<table id="t3">
+			<tr>
+				<th>취득일</th>
+				<th>종류 및 등급</th>
+				<th>발행처</th>
+				<th>보유기술 및 수준</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="peri"></td>
+				<td><input type="text" name="grade"></td>
+				<td><input type="text" name="coprn"></td>
+				<td><input type="text" name="skill"></td>
+			</tr>
+		</table>
 		<br>
 		<br>
-		<div style="margin-left:188px"><b><p style="font-size:120%">□ 이용자정보</p></b></div>
-		<small><div style="margin-left:1475px">✓ 표시 항목은 필수 입력 항목입니다.</div></small>
-		<table width=80%">
+		<span>▼ 경력(4대 보험 가입 경력)</span>
+		<br>
+		<input type="button" value="+ 추가 " onclick="add_row4()" style="padding:5px 10px; margin-left: 1520px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row4(this) " style="padding:5px 10px;">
+		<table id="t4">
 			<tr>
-				<th width="34px">✓ 소속(회사)</th>
-				<td width="120px"><input type="text" name="corp" id="corp" size="30"></td>
+				<th>활동기간</th>
+				<th>기 관</th>
+				<th>담당업무</th>
+				<th>경력 및 습득역량</th>
+			</tr>
+			<tr>
+				<td><input type="date" name="per"></td>
+				<td><input type="text" name="corpra"></td>
+				<td><input type="text" name="workk"></td>
+				<td><input type="text" name="skill1"></td>
 			</tr>
 		</table>
-		<table width=80%">
+		<br>
+		<span>▼ 자기소개서(파일로 첨부하세요)</span>
+		<table>
 			<tr>
-				<th width="19.8px">사업자등록번호</th>
-				<td width="121px">
-					<input type="number" name="number id="num" size="10"> - <input type="number" name="number" id="num" size="10"> 
-					- <input type="number" name="number" id="num" size="20">
-				</td>
+				<td width="250px;" bgcolor="#f3f3f1"><b><center>자기소개서</center></b></th>
+				<td><input type="file" name="file"></td>
 			</tr>
 		</table>
-		<table width=80%">
-			<tr>
-				<th width="35.4px">✓ 사업자등록증(첨부)</th>
-				<td width="120px"><input type="file" name="file">
-					<br><span style="font-size:13px; color:#5F4C0B">💬 소속(회사)의 사업자등록증을 업로드해주시기바랍니다.(이미지 파일만 업로드 가능 / PDF파일 업로드 불가)</span>
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="34px">✓ 분야</th>
-				<td width="100px">
-					<input type="checkbox" name="movie">영화
-					<input type="checkbox" name="broadcast">방송
-					<input type="checkbox" name="publish">출판
-					<input type="checkbox" name="art">공연/예술
-					<input type="checkbox" name="invest">투자/배급
-					<input type="checkbox" name="cha">캐릭터/애니메이션
-					<input type="checkbox" name="etc">기타
-					<input type="text" name="contents" id="contents" size="30">
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="34px">✓ 직종</th>
-				<td width="100px">
-					<input type="checkbox" name="produce">제작자
-					<input type="checkbox" name="inv">투자자
-					<input type="checkbox" name="agent">에이전트
-					<input type="checkbox" name="etc2">기타
-					<input type="text" name="content" id="content" size="30">
-				</td>
-			</tr>
-		</table>
-		<table width=80%">
-			<tr>
-				<th width="34px">주요 경력</th>
-				<td width="120px"><b>주요경력사항을 등록해 주시기 바랍니다.</b>
-					<br><span style="font-size:13px; color:#5F4C0B">💬( 기간, 사업내용, 담당업무를 입력해 주시기 바랍니다 )</span>
-					<br><input type="date"> ~ <input type="date">
-					<input type="text" name="title2" placeholder="사업내용을 입력해주세요" id="title" size="30">
-					<input type="text" name="title3" placeholder="담당업무를 입력해주세요" id="title" size="30">
-					<input type="reset" value="🗑삭제">
-					<br>
-					<div id="pre_set2" style="display:none">
-						<input type="date"> ~ <input type="date">
-		  			 	<input type="text" name="text3" placeholder="사업내용을 입력해주세요" size="30"> 
-		   				<input type="text" name="text4" placeholder="담당업무를 입력해주세요" size="30">   
-				   		<input type="button" value="🗑삭제" onclick="remove2(this)">
-					</div>
-					<div id="field2"></div>
-					<input type="button" value="+추가 " onclick="add2()">
-				</td>
-			</tr>
-		</table>
+		<br>
+		<br>
+		<form method="get" action="recruitRegForm.html">
+			<input type="button" value="✔ 저장" style="padding:10px 20px; font-size:20px; margin-left: 830px; border: 0px;" onclick="save();"> 
+			<input type="button" value="✘ 취소" style="padding:10px 20px; font-size:20px; margin-left: 20px; border: 0px;" onclick="location.href='recruitList.html'">	
+		</form>
 	</form>
 </body>
 </html>
