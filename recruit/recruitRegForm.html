@@ -51,7 +51,7 @@
 		}
 		/* t1 */
 		function add_row() {
-		    var t1body = document.getElementById("t1");
+		    var t1 = document.getElementById("t1");
 		    var row = t1.insertRow( t1.rows.length ); 
 		    var cell1 = row.insertCell(0);
 		    var cell2 = row.insertCell(1);
@@ -71,7 +71,7 @@
 		}
 		/* t2 */
 		function add_row2() {
-		    var t2body = document.getElementById("t2");
+		    var t2 = document.getElementById("t2");
 		    var row = t2.insertRow( t2.rows.length ); 
 		    var cell1 = row.insertCell(0);
 		    var cell2 = row.insertCell(1);
@@ -87,7 +87,7 @@
 		}
 		/* t3 */
 		function add_row3() {
-		    var t3body = document.getElementById("t3");
+		    var t3 = document.getElementById("t3");
 		    var row = t3.insertRow( t3.rows.length ); 
 		    var cell1 = row.insertCell(0);
 		    var cell2 = row.insertCell(1);
@@ -105,7 +105,7 @@
 		}
 		/* t4 */
 		function add_row4() {
-		    var t4body = document.getElementById("t4");
+		    var t4 = document.getElementById("t4");
 		    var row = t4.insertRow( t4.rows.length ); 
 		    var cell1 = row.insertCell(0);
 		    var cell2 = row.insertCell(1);
@@ -132,39 +132,39 @@
 				<td rowspan="6" width="1px"><input type="file" name="file"></td>
 				<th rowspan="3">성명</th>
 				<td width="55px;">(한글)</td>
-				<td width="230px;"><input type="text" name="name"></td>
+				<td width="230px;"><input type="text" name="name" autocomplete="off"></td>
 				<th>지원회사</th>
-				<td width="230px;"><input type="text" name="comp"></td>
+				<td width="230px;"><input type="text" name="comp" autocomplete="off"></td>
 			</tr>
 			<tr>
 				<td width="20px;">(한자)</td>
-				<td><input type="text" name="cname"></td>
+				<td><input type="text" name="cname" autocomplete="off"></td>
 				<th>지원분야</th>
-				<td width="100px"><input type="text" name="depart"></td>
+				<td width="100px"><input type="text" name="depart" autocomplete="off"></td>
 			</tr>
 			<tr>
 				<td width="20px;">(영문)</td>
-				<td><input type="text" name="ename"></td>
+				<td><input type="text" name="ename" autocomplete="off"></td>
 				<th>희망연봉</th>
-				<td><input type="text" name="salary"></td>
+				<td><input type="text" name="salary" autocomplete="off"></td>
 			</tr>
 			<tr>
 				<th>생년월일</th>
 				<td width="20px;">(양력,음력)</td>
-				<td><input type="date" name="birth"></td>
+				<td><input type="date" name="birth" autocomplete="off"></td>
 				<th>근무가능시기</th>
-				<td><input type="date" name="work"> ~</td>
+				<td><input type="date" name="work" autocomplete="off"> ~</td>
 			</tr>
 			<tr>
 				<th rowspan="2">연락처</th>
 				<td width="20px;">휴대전화</td>
-				<td><input type="text" name="mobile"></td>
+				<td><input type="text" name="mobile" autocomplete="off"></td>
 				<th>e-mail</th>
-				<td><input type="text" name="email"></td>
+				<td><input type="text" name="email" autocomplete="off"></td>
 			</tr>
 			<tr>
 				<td width="20px;">주소</td>
-				<td colspan="3"><input type="text" name="add"></td>
+				<td colspan="3"><input type="text" name="add" autocomplete="off"></td>
 			</tr>
 		</table>
 		<br>
@@ -181,8 +181,8 @@
 				<th>소재지</th>
 			</tr>
 			<tr>
-				<td><input type="date" name="date"> ~ <input type="date" name="date"></td>
-				<td><input type="text" name="school"></td>
+				<td><input type="date" name="date" autocomplete="off" > ~ <input type="date" name="date" autocomplete="off"></td>
+				<td><input type="text" name="school" autocomplete="off"></td>
 				<td>
 					<select>
 						<option>졸업
@@ -190,8 +190,8 @@
 						<option>유예
 					</select>
 				</td>
-				<td><input type="text" name="major"></td>
-				<td><input type="text" name="place"></td>
+				<td><input type="text" name="major" autocomplete="off"></td>
+				<td><input type="text" name="place" autocomplete="off"></td>
 			</tr>
 		</table>
 		<br>
@@ -207,8 +207,8 @@
 				<th>연수과정 및 내용</th>
 			</tr>
 			<tr>
-				<td><input type="date" name="period"> ~ <input type="date" name="period" ></td>
-				<td><input type="text" name="coprname"></td>
+				<td><input type="date" name="period"> ~ <input type="date" name="period" autocomplete="off"></td>
+				<td><input type="text" name="coprname" autocomplete="off"></td>
 				<td><textarea rows="5" cols="100" placeholder="150자 내외로 작성하세요."></textarea></td>
 			</tr>
 		</table>
@@ -226,10 +226,10 @@
 				<th>보유기술 및 수준</th>
 			</tr>
 			<tr>
-				<td><input type="date" name="peri"></td>
-				<td><input type="text" name="grade"></td>
-				<td><input type="text" name="coprn"></td>
-				<td><input type="text" name="skill"></td>
+				<td><input type="date" name="peri" autocomplete="off"></td>
+				<td><input type="text" name="grade" autocomplete="off"></td>
+				<td><input type="text" name="coprn" autocomplete="off"></td>
+				<td><input type="text" name="skill" autocomplete="off"></td>
 			</tr>
 		</table>
 		<br>
@@ -246,10 +246,10 @@
 				<th>경력 및 습득역량</th>
 			</tr>
 			<tr>
-				<td><input type="date" name="per"> ~ <input type="date" name="per"></td>
-				<td><input type="text" name="corpra"></td>
-				<td><input type="text" name="workk"></td>
-				<td><input type="text" name="skill1"></td>
+				<td><input type="date" name="per"> ~ <input type="date" name="per" autocomplete="off"></td>
+				<td><input type="text" name="corpra" autocomplete="off"></td>
+				<td><input type="text" name="workk" autocomplete="off"></td>
+				<td><input type="text" name="skill1" autocomplete="off"></td>
 			</tr>
 		</table>
 		<br>
