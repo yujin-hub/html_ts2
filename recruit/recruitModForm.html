@@ -42,6 +42,10 @@
 			alert("저장되었습니다.");
 			location.href="recruitView.html";
 		}
+		function cancle() {
+			alert("작성된 내용이 모두 삭제됩니다. 취소하시겠습니까?");
+			location.href="recruitList.html";
+		}
 		/* t1 */
 		function add_row() {
 		    var t1body = document.getElementById("t1");
@@ -71,7 +75,7 @@
 			var cell3 = row.insertCell(2);
 			cell1.innerHTML= '<input type="date" name="period"> ~ <input type="date" name="period">';
 			cell2.innerHTML= '<input type="text" name="coprname">';
-			cell3.innerHTML= '<input type="text" name="contents">';
+			cell3.innerHTML= '<textarea rows="5" cols="100">';
 		}
 		function delete_row2() {
 		    var t2 = document.getElementById("t2");
@@ -122,7 +126,7 @@
 		<span>▼ 기본 정보</span>
 		<table>
 			<tr>
-				<td rowspan="6" width="1px"><input type="file" name="file"></td>
+				<td rowspan="6" width="1px"><input type="file" name="file"><img src="./image/yu.jpg"></td>
 				<th rowspan="3">성명</th>
 				<td width="55px;">(한글)</td>
 				<td width="230px;"><input type="text" name="name" value="유재석"></td>
@@ -151,7 +155,7 @@
 			<tr>
 				<th rowspan="2">연락처</th>
 				<td width="20px;">휴대전화</td>
-				<td><input type="number" name="mobile" value="010-0000-0000"></td>
+				<td><input type="text" name="mobile" value="010-0000-0000"></td>
 				<th>e-mail</th>
 				<td><input type="text" name="email" value="wotjr@naver.com"></td>
 			</tr>
@@ -163,8 +167,8 @@
 		<br>
 		<br>
 		<span>▼ 학력 (최신 이력이 가장 위로)</span>
-		<input type="button" value="+ 추가 " onclick="add_row()" style="padding:5px 10px; margin-left: 1506px;">
-		<input type="button" value="🗑 삭제" onclick="delete_row(this)" style="padding:5px 10px;">
+		<input type="button" value="+ 추가 " onclick="add_row()" style="padding:5px 10px; margin-left: 1514px; border: 0px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row(this)" style="padding:5px 10px; border: 0px;">
 		<table id="t1">
 			<tr>
 				<th>기간</th>
@@ -204,8 +208,8 @@
 		<br>
 		<span>▼ 교육연수</span>
 		<br>
-		<input type="button" value="+ 추가 " onclick="add_row2()" style="padding:5px 10px; margin-left: 1506px;">
-		<input type="button" value="🗑 삭제" onclick="delete_row2(this)" style="padding:5px 10px;">
+		<input type="button" value="+ 추가 " onclick="add_row2()" style="padding:5px 10px; margin-left: 1514px; border: 0px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row2(this)" style="padding:5px 10px; border: 0px;">
 		<table id="t2">
 			<tr>
 				<th>연수기간</th>
@@ -215,15 +219,18 @@
 			<tr>
 				<td><input type="date" name="period" value="2021-12-30"> ~ <input type="date" name="period" value="2022-06-22"></td>
 				<td><input type="text" name="coprname" value="기관"></td>
-				<td><input type="text" name="contents" value="내용"></td>
+				<td>
+					<textarea  rows="5" cols="100">Open API활용 자바 안드로이드 웹&앱 개발자 :JAVA, JAVASCRIPT, JQUERY, JSP, SPRING, HTML, CSS, GIT, Bootstrap, JSTL, AJAX POSTMAN AWS TOMCAT, 등을 공부하여 자바를 이용한 웹 프로그래밍 역량을 키웠습니다.
+					</textarea>
+				</td>
 			</tr>
 		</table>
 		<br>
 		<br>
 		<span>▼ 자격사항</span>
 		<br>
-		<input type="button" value="+ 추가 " onclick="add_row3()" style="padding:5px 10px; margin-left: 1506px;">
-		<input type="button" value="🗑 삭제" onclick="delete_row3(this)" style="padding:5px 10px;">
+		<input type="button" value="+ 추가 " onclick="add_row3()" style="padding:5px 10px; margin-left: 1514px; border: 0px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row3(this)" style="padding:5px 10px; border: 0px;">
 		<table id="t3">
 			<tr>
 				<th>취득일</th>
@@ -248,8 +255,8 @@
 		<br>
 		<span>▼ 경력(4대 보험 가입 경력)</span>
 		<br>
-		<input type="button" value="+ 추가 " onclick="add_row4()" style="padding:5px 10px; margin-left: 1506px;">
-		<input type="button" value="🗑 삭제" onclick="delete_row4(this)" style="padding:5px 10px;">
+		<input type="button" value="+ 추가 " onclick="add_row4()" style="padding:5px 10px; margin-left: 1514px; border: 0px;">
+		<input type="button" value="🗑 삭제" onclick="delete_row4(this)" style="padding:5px 10px; border: 0px;">
 		<table id="t4">
 			<tr>
 				<th>활동기간</th>
@@ -280,9 +287,13 @@
 		</table>
 		<br>
 		<br>
+		<b><center>입사지원서를 제출함에 있어 일체의 허위사실 기재내용이 없음을 확인합니다.</center></b><br>
+		<b><center>2022년 7월 2일 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;성명 : 유재석 (인 또는 서명)</center></b>
+		<br>
+		<br>
 		<form method="get" action="recruitRegForm.html">
 			<input type="button" value="✔ 저장" style="padding:10px 20px; font-size:20px; margin-left: 830px; border: 0px;" onclick="save();"> 
-			<input type="button" value="✘ 취소" style="padding:10px 20px; font-size:20px; margin-left: 20px; border: 0px;" onclick="location.href='recruitView.html'">	
+			<input type="button" value="✘ 취소" style="padding:10px 20px; font-size:20px; margin-left: 20px; border: 0px;" onclick="cancle();">	
 		</form>
 	</form>
 </body>
