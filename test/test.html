@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>11.09.test</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ 	<script src="https://kit.fontawesome.com/d843c66cc1.js" crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+      .container {
+		width: 1200px;	
+      }
+      
+      .font{
+      	font-size: 20px;
+      	color: gray;
+      }
+      
+      .none{
+      	text-decoration: none;
+      	color: black;
+      }
+      
+      .title{
+      	font-size: 30px;
+      	font-weight: bold;
+      }
+      
+      .mid{
+      	text-align: center;
+      }
+      
+    </style>
+</head>
+<body>
+	<!-- header  -->  
+	<div class="container py-3">
+		<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+			<span class="fs-4">Pricing example</span>
+  			<nav class="ms-md-auto">
+				<a class="me-3 py-2 none" href="#">Features</a>
+				<a class="me-3 py-2 none" href="#">Enterprise</a>
+				<a class="me-3 py-2 none" href="#">Support</a>
+				<a class="py-2 none" href="#">Pricing</a>
+  			</nav>
+		</div>
+		<div class="mid">
+			<span class="title">Pricing</span>
+			<p class="font">
+				Quickly build an effective pricing table for your potential customers with <br>
+				this Bootstrap example. It’s built with default Bootstrap components <br>
+				and utilities with little customization.
+			</p>
+		</div>
+
+    	<div class="row row-cols-1 row-cols-md-3 mb-3 mid">
+     		<div class="col">
+        		<div class="card mb-4 rounded-3 shadow-sm">
+          			<div class="card-header py-3">
+            			<h4>Free</h4>
+          			</div>
+          			<div class="card-body">
+		            	<h1 class="card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+		            	<ul class="list-unstyled mt-3 mb-4">
+							<li>10 users included</li>
+							<li>2 GB of storage</li>
+							<li>Email support</li>
+							<li>Help center access</li>
+            			</ul>
+            			<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+          			</div>
+       			 </div>
+     		</div>
+      		<div class="col">
+        		<div class="card mb-4 rounded-3 shadow-sm">
+          			<div class="card-header py-3">
+            			<h4>Pro</h4>
+          			</div>
+          			<div class="card-body">
+	            		<h1 class="card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+	            		<ul class="list-unstyled mt-3 mb-4">
+			              <li>20 users included</li>
+			              <li>10 GB of storage</li>
+			              <li>Priority email support</li>
+			              <li>Help center access</li>
+	            		</ul>
+           				<button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+         			</div>
+       			</div>
+      		</div>
+      		<div class="col">
+      			<div class="card mb-4 rounded-3 shadow-sm border-primary">
+          			<div class="card-header py-3 text-bg-primary border-primary">
+           				<h4>Enterprise</h4>
+         			</div>
+	         		<div class="card-body">
+	            		<h1 class="card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+	            		<ul class="list-unstyled mt-3 mb-4">
+							<li>30 users included</li>
+							<li>15 GB of storage</li>
+							<li>Phone and email support</li>
+							<li>Help center access</li>
+	            		</ul>
+	           			<button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+	          		</div>
+        		</div>
+     		</div>
+    	</div>
+
+    	<h2 class="display-6 mid mb-4">Compare plans</h2>
+
+    	<div class="table-responsive">
+     		<table class="table mid">
+     			<thead>
+					<tr>
+						<th style="width: 30%;"></th>
+						<th style="width: 20%;">Free</th>
+						<th style="width: 20%;">Pro</th>
+						<th style="width: 20%;">Enterprise</th>
+					</tr>
+				</thead>
+        		<tbody>
+					<tr>
+						<th scope="row" class="text-start">Public</th>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+					</tr>
+          			<tr>
+            			<th scope="row" class="text-start">Private</th>
+            			<td></td>
+            			<td><i class="fa-solid fa-check-double"></i></td>
+            			<td><i class="fa-solid fa-check-double"></i></td>
+          			</tr>
+       			</tbody>
+        		<tbody>
+          			<tr>
+						<th scope="row" class="text-start">Permissions</th>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+         			</tr>
+          			<tr>
+						<th scope="row" class="text-start">Sharing</th>
+						<td></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+         			</tr>
+          			<tr>
+						<th scope="row" class="text-start">Unlimited members</th>
+						<td></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+          			</tr>
+          			<tr>
+						<th scope="row" class="text-start">Extra security</th>
+						<td></td>
+						<td></td>
+						<td><i class="fa-solid fa-check-double"></i></td>
+          			</tr>
+        		</tbody>
+      		</table>
+    	</div>
+
+		<!-- footer -->
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+			<div class="row">
+				<div class="col-12 col-md">
+					<small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Features</h5>
+					<ul class="list-unstyled text-small">
+						<li class="mb-1"><a class="link-secondary none" href="#">Cool stuff</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Random feature</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Team feature</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Stuff for developers</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Another one</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Last time</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Resources</h5>
+					<ul class="list-unstyled text-small">
+						<li class="mb-1"><a class="link-secondary none" href="#">Resource</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Resource name</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Another resource</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Final resource</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>About</h5>
+					<ul class="list-unstyled text-small">
+						<li class="mb-1"><a class="link-secondary none" href="#">Team</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Locations</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Privacy</a></li>
+						<li class="mb-1"><a class="link-secondary none" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+    
+  </body>
+</html>
